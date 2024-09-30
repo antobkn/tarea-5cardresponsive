@@ -1,0 +1,159 @@
+:root{
+    --background-body: rgb(132, 211, 180);
+    --background-caja:fuchsia;
+    --border-caja: green;
+    --color-cajitas: rgb(5, 249, 212); /* Coral suave */
+    --color-p: aliceblue;
+    --hover-color: rgb(2, 253, 169); /* Color de hover para botones */
+}
+
+
+body {
+    font-family: Poppins, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 200vh;
+    margin: 0;
+    background-color: var(--background-body);
+}
+
+.caja{
+    background-color: var(--background-caja);
+    width: 90%; /* Usar porcentaje para más flexibilidad */
+    max-width: 700px; /* Limitar ancho máximo */
+    padding: 20px;
+    border: 1px solid var(--border-caja); /* Ajustar el borde a 10px */
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1), 0 10px 30px rgba(0, 0, 0, 0.3); /* Sombreado exterior aumentado */
+    display: grid;
+    grid-template-columns: 200px 1fr;
+    gap: 20px;
+    transition: transform 0.3s ease; /* Transición para el efecto de flotabilidad */ 
+
+}
+
+.caja:hover{
+    transform: translate(-10px); /* Eleva la card al pasar el ratón */
+
+}
+
+.imagen{
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+    grid-row: 1 / span 3;
+}
+
+.contenido{
+    display: grid;
+    grid-template-rows: auto auto 1fr;
+    gap: 10px;
+}
+
+h1{
+    margin: 0;
+}
+
+.p{
+    background-color: var(--color-p);
+    padding: 10px;
+    border-radius: 5px;
+}
+
+.cajitas{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 10px;
+}
+
+.cajitas{
+    width: 100%;
+    height: 50px;
+    
+    box-sizing: border-box;
+    border-radius: 5px;
+    display: flex;
+    justify-content: center; /* Centra el texto horizontalmente */
+    align-items: center; /* Centra el texto verticalmente */
+    text-decoration: none; /* Sin subrayado en el texto */
+    flex-wrap: wrap;
+    color: white; /* Color del texto */
+    font-weight: bold; /* Texto en negrita */
+    transition: background-color 0.3s; /* Efecto de transición */
+    gap: .5rem;
+}
+
+.cajita {
+    width: calc(50% - 3rem);
+    background-color: var(--color-cajitas);
+    padding: 0.35rem 1rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.cajita img {
+width: 20px; /* Ajusta el tamaño del logo */
+height: 20px; /* Ajusta el tamaño del logo */
+margin-right: 8px; /* Espacio entre el logo y el texto */
+}
+.cajita:hover{
+    background-color: var(--hover-color); /* cambia el color al pasar el mouse */
+}
+
+@media screen and (max-width: 500px){
+    .caja{
+       grid-template-columns:1fr; /* una sola columna en pantallas pequeñas */    
+     }
+}
+
+@media screen and (min-width: 500px) and (max-width: 700px) {
+    .caja {
+        grid-template-columns: 1fr; /*  mantiene una sola columna */
+      }
+    }
+
+    @media screen and (min-width: 764px) {
+        .caja {
+            grid-template-columns: 250px 1fr; /* Dos columnas en pantallas más grandes */
+        }
+    }
+
+    @media screen and (min-width:1024px) {
+        .caja {
+            grid-template-columns: 300px 1fr;
+            height: auto;
+        }
+    }
+    
+    @media screen and (min-width: 1440px) {
+        .caja {
+            height: auto;
+        }
+    }
+
+    @media screen and (main-width: 1750px) {
+        .caja {
+            width: 800px;
+        }
+    }
+
+   
+        
+        @media screen and (min-width: 1440px) {
+            .caja {
+                height: auto;
+            }
+        }
+    
+        @media screen and (main-width: 1750px) {
+            .caja {
+                width: 800px;
+            }
+        }  
+  
+
+  
+
